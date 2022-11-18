@@ -1,0 +1,17 @@
+.my-card {
+	display: flex;
+	flex-direction: column;
+	background-color: azure;
+	padding: 1rem 4rem;
+	border-radius: 5px;
+
+	text-align: center;
+}
+
+.my-card > i {
+	font-size: 1.5rem;
+}
+
+.my-card > span {
+	font-size: 0.7rem;
+}
