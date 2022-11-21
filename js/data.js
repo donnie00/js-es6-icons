@@ -112,3 +112,41 @@ export const data = [
 		color: 'blue',
 	},
 ];
+
+const esadecimal = [
+	'0',
+	'1',
+	'2',
+	'3',
+	'4',
+	'5',
+	'6',
+	'7',
+	'8',
+	'9',
+	'A',
+	'B',
+	'C',
+	'D',
+	'E',
+	'F',
+];
+
+const color = `#${generateColor().join('')}`;
+
+function randomNumber(minNumber, maxNumber) {
+	const min = Math.ceil(minNumber);
+	const max = Math.floor(maxNumber);
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function generateColor() {
+	const generatedNum = [];
+
+	while (generatedNum.length < 6) {
+		const index = randomNumber(0, 15);
+		generatedNum.push(esadecimal[index]);
+	}
+
+	return generatedNum;
+}
