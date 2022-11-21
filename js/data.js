@@ -113,6 +113,8 @@ export const data = [
 	},
 ];
 
+export const filters = ['All', 'Animal', 'Vegetable', 'User'];
+
 const esadecimal = [
 	'0',
 	'1',

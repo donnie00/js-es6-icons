@@ -1,4 +1,4 @@
-import {data} from './data.js';
+import {data, filters} from './data.js';
 
 const containerRow = document.querySelector('.container > .row');
 const filterEl = document.getElementById('filter');
@@ -55,8 +55,22 @@ data.forEach((element) => {
 	containerRow.append(card);
 });
 
+filters.forEach((element) => {
+	const option = createFilter(element);
+	console.log(option);
+	console.log(element);
+	filterEl.append(option);
+});
+
 //aggiungo un evento al cambio del filtro selezionato
 filterEl.addEventListener('change', function () {
 	const filter = this.value.toLowerCase();
 	filterSwap(filter);
 });
+
+function createFilter(value) {
+	const filterOption = document.createElement('option');
+	filterOption.setAttribute('value', value);
+	filterOption.innerText = value;
+	return filterOption;
+}
